@@ -1,0 +1,41 @@
+SQL CHECK Constraint
+: column에 들어가는 값의 범위를 제약하는 함수
+- 형식 : CONSTRAINT 제약명 CHECK (제약조건)
+제약명 : 테이블명_컬럼명_제약명 약자
+
+sasex in ('남자','여자') -> 판다스의 isin과 유사('or'의 의미)
+---------------------------------------------------------------------
+
+SQL> drop table sawon;
+
+Table dropped.
+
+SQL> create table sawon(sabun number(3),
+  2  saname varchar2(15),
+  3  deptno number(3),
+  4  sajob varchar2(15),
+  5  sapay number(10),
+  6  sahire date,
+  7  sasex varchar2(6),
+  8  samgr number(3),
+  9  constraint sawon_sasex_ck check(sasex in ('남자','여자'))
+ 10  );
+
+Table created.
+
+SQL> insert into sawon
+  2  values(5, '이순라', 20, '사원', 1200, '1990-05-01', '여자', 3);
+
+1 row created.
+
+SQL> insert into sawon
+  2  values(5, '이순라', 20, '사원', 1200, '1990-05-01', '남자', 3);
+
+1 row created.
+
+SQL> insert into sawon
+  2  values(5, '이순라', 20, '사원', 1200, '1990-05-01', '자', 3);
+insert into sawon
+*
+ERROR at line 1:
+ORA-02290: check constraint (SCOTT.SAWON_SASEX_CK) violated

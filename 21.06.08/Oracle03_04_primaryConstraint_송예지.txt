@@ -1,0 +1,32 @@
+primary key
+프라이머리키 제약은 기본적으로 not null과 unique제약이 걸려있다
+
+형식: constraint 제약명 primary key (제약을 줄 컬럼명)
+
+-----------------------------------------------------------------------------
+
+SQL> create table dept(deptno number(3),
+  2  dname varchar2(10),
+  3  loc varchar2(10),constraint dept_deptno_pk primary key (deptno));
+
+Table created.
+
+SQL> insert into dept
+  2  values(10, '총무부', '서울');
+
+1 row created.
+
+SQL> insert into dept
+  2  (dname) values('총무부');
+insert into dept
+*
+ERROR at line 1:
+ORA-01400: cannot insert NULL into ("SCOTT"."DEPT"."DEPTNO")
+
+
+SQL> insert into dept
+  2  values(10, '총무부', '서울');
+insert into dept
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SCOTT.DEPT_DEPTNO_PK) violated

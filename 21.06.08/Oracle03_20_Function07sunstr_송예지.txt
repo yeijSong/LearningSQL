@@ -1,0 +1,30 @@
+substr : 중간문자열 반환 [substr(문자열,위치,길이)]
+instr : 문자열의 위치 반환 [instr(문자열,위치 알고싶은 문자열)]
+replace : 문자열 치환[replace(문자열, old문자열,new문자열)]
+
+///----------------------------------------------------------------///
+
+SQL> select substr('happyday',3,3) from dual;
+
+SUBSTR
+------
+ppy
+
+SQL> select substr('happyday','ppy') from dual;
+select substr('happyday','ppy') from dual
+                         *
+ERROR at line 1:
+ORA-01722: invalid number
+
+
+SQL> select instr('happyday','ppy') from dual;
+
+INSTR('HAPPYDAY','PPY')
+-----------------------
+                      3
+
+SQL> select replace ('happyday','ppy','qqy') from dual;
+
+REPLACE('HAPPYDA
+----------------
+haqqyday

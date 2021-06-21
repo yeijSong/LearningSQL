@@ -1,0 +1,23 @@
+Concat
+문자열을 합할 때 사용
+(주의! 오라클에서는 세개 이상의 문자열을 합할 때에는 '||'를 사용)
+  
+
+SQL> select concat ('Nice','Day') from dual;
+
+CONCAT('NICE',
+--------------
+NiceDay
+
+SQL> select concat ('Nice','Day','!!') from dual;
+select concat ('Nice','Day','!!') from dual
+       *
+ERROR at line 1:
+ORA-00909: invalid number of arguments
+
+
+SQL> select 'Nice'||'day'||'!!' as concat from dual;
+
+CONCAT
+------------------
+Niceday!!

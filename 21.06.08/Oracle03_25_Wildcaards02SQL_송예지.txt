@@ -1,0 +1,200 @@
+% : 임의의 모든 문자
+_ : 한문자
+
+SQL> select saname,deptno,sajob
+  2  from sawon
+  3  where deptno=10 and sajob='사원';
+
+SANAME                   DEPTNO SAJOB
+-------------------- ---------- --------------------
+무궁화                       10 사원
+최진실                       10 사원
+
+SQL> select saname,deptno,sajob
+  2  from sawon
+  3  where not deptno=10;
+
+SANAME                   DEPTNO SAJOB
+-------------------- ---------- --------------------
+한국남                       20 부장
+이순신                       20 과장
+이순라                       20 사원
+놀기만                       20 과장
+뷰별나                       20 과장
+채시라                       20 사원
+이성계                       30 부장
+임꺽정                       20 사원
+공부만                       30 과장
+채송화                       30 대리
+이미라                       30 대리
+공부해                       30 사원
+김유신                       30 사원
+강감찬                       30 사원
+
+14 rows selected.
+
+SQL> dir sys*
+SP2-0042: unknown command "dir sys*" - rest of line ignored.
+SQL> select ?'장' form sawon;
+select ?'장' form sawon
+       *
+ERROR at line 1:
+ORA-00911: invalid character
+
+
+SQL> slect saname
+SP2-0734: unknown command beginning "slect sana..." - rest of line ignored.
+SQL> select saname
+  2  from sawon
+  3  where saname like '%만';
+
+SANAME
+--------------------
+놀기만
+공부만
+
+SQL> select saname
+  2  fro sawon
+  3  where saname like '채%';
+fro sawon
+    *
+ERROR at line 2:
+ORA-00923: FROM keyword not found where expected
+
+
+SQL> select saname
+  2  from sawon
+  3  where saname like '채%';
+
+SANAME
+--------------------
+채시라
+채송화
+
+SQL> select saname
+  2  from sawon
+  3  where saname like '김%';
+
+SANAME
+--------------------
+김유신
+
+SQL> select saname
+  2  from sawon
+  3  where saname like '%미%';
+
+SANAME
+--------------------
+이미라
+
+SQL> select saname
+  2  from sawon;
+
+SANAME
+--------------------
+홍길동
+한국남
+이순신
+이순라
+놀기만
+뷰별나
+채시라
+이성계
+무궁화
+임꺽정
+깨똥이
+공부만
+채송화
+이미라
+공부해
+뷰명한
+무궁화
+최진실
+김유신
+강감찬
+
+20 rows selected.
+
+SQL> select goname
+  2  from gogek
+  3  where goname like '__';
+
+GONAME
+--------------------
+뷰민
+강민
+영희
+철이
+뷰완
+캔디
+똘이
+쇠돌
+홍이
+안나
+
+10 rows selected.
+
+SQL> select saname
+  2  from sawon
+  3  where saname like '순';
+
+no rows selected
+
+SQL> select saname
+  2  from sawon
+  3  where saname like '%순';
+
+no rows selected
+
+SQL> select saname from sawon;
+
+SANAME
+--------------------
+홍길동
+한국남
+이순신
+이순라
+놀기만
+뷰별나
+채시라
+이성계
+무궁화
+임꺽정
+깨똥이
+공부만
+채송화
+이미라
+공부해
+뷰명한
+무궁화
+최진실
+김유신
+강감찬
+
+20 rows selected.
+
+SQL> select saname
+  2  from sawon
+  3  where saname like '%순%';
+
+SANAME
+--------------------
+이순신
+이순라
+
+SQL> select saname
+  2  from sawon
+  3  where saname like '_미%';
+
+SANAME
+--------------------
+이미라
+
+SQL> select saname
+  2  from sawon
+  3  where saname like '%만';
+
+SANAME
+--------------------
+놀기만
+공부만

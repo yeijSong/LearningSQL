@@ -1,0 +1,23 @@
+SQL> select 'The' || ' most beautiful thing ' || 'is love.' from dual;
+
+'THE'||'MOSTBEAUTIFULTHING'||'ISLOVE.'
+------------------------------------------------------------------
+The most beautiful thing is love.
+
+SQL> select 'The' || trim(' most beautiful thing ') || 'is love.' from dual;
+
+'THE'||TRIM('MOSTBEAUTIFULTHING')||'ISLOVE.'
+--------------------------------------------------------------
+Themost beautiful thingis love.
+
+SQL> select 'The' || ltrim(' most beautiful thing ') || 'is love.' from dual;
+
+'THE'||LTRIM('MOSTBEAUTIFULTHING')||'ISLOVE.'
+----------------------------------------------------------------
+Themost beautiful thing is love.
+
+SQL> select 'The' || rtrim(' most beautiful thing ') || 'is love.' from dual;
+
+'THE'||RTRIM('MOSTBEAUTIFULTHING')||'ISLOVE.'
+----------------------------------------------------------------
+The most beautiful thingis love.

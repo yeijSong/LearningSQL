@@ -1,0 +1,172 @@
+### wildcards : like operator
+
+cmd > cd\ > cd windows :
+** OS:
+ * : 임의의 모든문자
+ ? : 한 개 문자 의미
+
+
+C:\Users\Rentalhub-LG5>cd\
+
+C:\>cd windows
+
+C:\Windows>dir sys*
+ C 드라이브의 볼륨에는 이름이 없습니다.
+ 볼륨 일련 번호: 3835-9CA4
+
+ C:\Windows 디렉터리
+
+2019-12-07  오후 06:14    <DIR>          System
+2019-03-19  오후 01:49               219 system.ini
+2021-06-03  오전 10:42    <DIR>          System32
+2019-12-08  오전 12:00    <DIR>          SystemApps
+2021-05-15  오후 08:59    <DIR>          SystemResources
+2021-05-15  오후 08:59    <DIR>          SysWOW64
+               1개 파일                 219 바이트
+               5개 디렉터리  184,987,275,264 바이트 남음
+
+C:\Windows>dir ?e*
+ C 드라이브의 볼륨에는 이름이 없습니다.
+ 볼륨 일련 번호: 3835-9CA4
+
+ C:\Windows 디렉터리
+
+2021-05-14  오전 10:18    <DIR>          debug
+2019-12-07  오후 11:56    <DIR>          Help
+2021-05-07  오후 05:12         1,076,736 HelpPane.exe
+2019-12-07  오후 06:14    <DIR>          Performance
+2021-05-07  오후 05:12           370,176 regedit.exe
+2019-12-07  오후 06:31    <DIR>          Registration
+2019-12-08  오전 12:00    <DIR>          RemotePackages
+2019-12-07  오후 06:14    <DIR>          rescache
+2019-12-07  오후 06:31    <DIR>          Resources
+2019-12-08  오전 12:00    <DIR>          security
+2021-05-07  오후 05:16    <DIR>          ServiceProfiles
+2021-06-02  오전 10:00    <DIR>          ServiceState
+2021-05-14  오전 10:29    <DIR>          servicing
+2021-05-07  오후 05:18    <DIR>          Setup
+2021-05-10  오전 10:01             9,726 setupact.log
+2021-05-07  오후 05:19                 0 setuperr.log
+2021-06-08  오후 05:45    <DIR>          Temp
+2020-11-16  오전 11:14    <DIR>          TextInput
+2019-12-07  오후 06:31    <DIR>          Web
+               4개 파일           1,456,638 바이트
+              15개 디렉터리  184,987,275,264 바이트 남음
+
+C:\Windows>dir
+ C 드라이브의 볼륨에는 이름이 없습니다.
+ 볼륨 일련 번호: 3835-9CA4
+
+ C:\Windows 디렉터리
+
+2021-06-08  오전 10:01    <DIR>          .
+2021-06-08  오전 10:01    <DIR>          ..
+2019-12-07  오후 11:58    <DIR>          addins
+2021-05-11  오전 09:35    <DIR>          appcompat
+2021-05-15  오후 08:59    <DIR>          apppatch
+2021-06-08  오후 12:59    <DIR>          AppReadiness
+2021-06-03  오전 10:42    <DIR>          assembly
+2021-05-15  오후 08:59    <DIR>          bcastdvr
+2021-05-07  오후 05:11            77,824 bfsvc.exe
+2019-12-07  오후 06:31    <DIR>          Boot
+2019-12-07  오후 06:14    <DIR>          Branding
+2021-05-14  오전 10:29    <DIR>          CbsTemp
+2021-05-07  오후 05:20               762 comsetup.log
+2019-12-08  오전 12:22    <DIR>          Containers
+2020-11-13  오후 04:49    <DIR>          CSC
+2019-12-07  오후 06:14    <DIR>          Cursors
+2021-05-14  오전 10:18    <DIR>          debug
+2021-05-10  오전 10:01             7,623 diagerr.xml
+2019-12-07  오후 06:31    <DIR>          diagnostics
+2021-05-15  오후 08:59    <DIR>          DiagTrack
+2021-05-10  오전 10:01             7,623 diagwrn.xml
+2019-12-07  오후 11:56    <DIR>          DigitalLocker
+2019-12-07  오후 06:17               776 DtcInstall.log
+2019-12-07  오후 11:56    <DIR>          en-US
+2021-05-14  오전 10:27         4,826,160 explorer.exe
+2021-01-25  오전 12:13                 0 EXPRESSCACHE1.txt
+2021-06-08  오전 10:01                 0 FFS.txt
+2020-11-16  오후 12:31                 0 FFS8_1.txt
+2021-06-08  오전 10:01                 0 FFS_0.txt
+2019-12-07  오후 06:14    <DIR>          GameBarPresenceWriter
+2019-12-07  오후 06:31    <DIR>          Globalization
+2021-05-07  오후 03:58    <DIR>          HancomIME
+2019-12-07  오후 11:56    <DIR>          Help
+2021-05-07  오후 05:12         1,076,736 HelpPane.exe
+2019-12-07  오후 06:09            18,432 hh.exe
+2019-12-07  오후 06:31    <DIR>          IdentityCRL
+2021-05-07  오후 05:14    <DIR>          IME
+2021-05-15  오후 09:11    <DIR>          ImmersiveControlPanel
+2021-06-03  오전 10:42    <DIR>          INF
+2019-12-07  오후 06:14    <DIR>          InputMethod
+2021-05-15  오후 08:59    <DIR>          ko-KR
+2019-12-07  오후 06:14    <DIR>          L2Schemas
+2019-12-07  오후 06:14    <DIR>          LiveKernelReports
+2021-06-06  오후 03:47    <DIR>          Logs
+2019-12-07  오후 06:08            43,131 mib.bin
+2021-06-08  오후 12:58    <DIR>          Microsoft.NET
+2019-12-07  오후 06:14    <DIR>          Migration
+2019-12-07  오후 06:14    <DIR>          ModemLogs
+2021-05-07  오후 05:12           202,240 notepad.exe
+2019-12-07  오후 11:59    <DIR>          OCR
+2019-12-07  오후 06:14    <DIR>          Offline Web Pages
+2021-05-23  오전 09:25    <DIR>          Panther
+2019-12-07  오후 06:14    <DIR>          Performance
+2021-06-02  오전 10:00            24,716 PFRO.log
+2019-12-07  오후 06:31    <DIR>          PLA
+2021-05-15  오후 08:59    <DIR>          PolicyDefinitions
+2021-06-08  오후 05:45    <DIR>          Prefetch
+2021-05-15  오후 08:59    <DIR>          PrintDialog
+2019-12-07  오후 06:10            30,831 Professional.xml
+2021-05-15  오후 08:59    <DIR>          Provisioning
+2018-03-28  오후 04:08           897,688 py.exe
+2018-03-14  오전 03:13            59,040 pyshellext.amd64.dll
+2018-03-28  오후 04:08           897,688 pyw.exe
+2021-05-07  오후 05:12           370,176 regedit.exe
+2019-12-07  오후 06:31    <DIR>          Registration
+2019-12-08  오전 12:00    <DIR>          RemotePackages
+2019-12-07  오후 06:14    <DIR>          rescache
+2019-12-07  오후 06:31    <DIR>          Resources
+2019-07-05  오후 06:55         2,856,624 RtlExUpd.dll
+2019-12-07  오후 06:14    <DIR>          SchCache
+2019-12-08  오전 12:00    <DIR>          schemas
+2019-12-08  오전 12:00    <DIR>          security
+2021-05-07  오후 05:16    <DIR>          ServiceProfiles
+2021-06-02  오전 10:00    <DIR>          ServiceState
+2021-05-14  오전 10:29    <DIR>          servicing
+2021-05-07  오후 05:18    <DIR>          Setup
+2021-05-10  오전 10:01             9,726 setupact.log
+2021-05-07  오후 05:19                 0 setuperr.log
+2021-05-07  오후 05:14    <DIR>          ShellComponents
+2021-05-07  오후 05:14    <DIR>          ShellExperiences
+2021-05-07  오후 05:18    <DIR>          SHELLNEW
+2019-12-07  오후 06:31    <DIR>          SKB
+2021-05-10  오전 10:01    <DIR>          SoftwareDistribution
+2019-12-07  오후 06:14    <DIR>          Speech
+2019-12-07  오후 06:14    <DIR>          Speech_OneCore
+2021-05-07  오후 05:11           136,192 splwow64.exe
+2019-12-07  오후 06:14    <DIR>          System
+2019-03-19  오후 01:49               219 system.ini
+2021-06-03  오전 10:42    <DIR>          System32
+2019-12-08  오전 12:00    <DIR>          SystemApps
+2021-05-15  오후 08:59    <DIR>          SystemResources
+2021-05-15  오후 08:59    <DIR>          SysWOW64
+2019-12-07  오후 06:14    <DIR>          TAPI
+2021-05-10  오전 10:01    <DIR>          Tasks
+2021-06-08  오후 05:45    <DIR>          Temp
+2020-11-16  오전 11:14    <DIR>          TextInput
+2019-12-07  오후 06:14    <DIR>          tracing
+2021-05-07  오후 05:14    <DIR>          twain_32
+2019-12-07  오후 06:10            65,024 twain_32.dll
+2019-12-07  오후 06:14    <DIR>          Vss
+2019-12-07  오후 06:14    <DIR>          WaaS
+2019-12-07  오후 06:31    <DIR>          Web
+2020-11-16  오후 12:32               167 win.ini
+2021-06-02  오전 10:00               276 WindowsUpdate.log
+2019-12-07  오후 06:10            11,776 winhlp32.exe
+2021-06-03  오전 10:41    <DIR>          WinSxS
+2019-12-08  오전 12:00           316,640 WMSysPr9.prx
+2019-12-07  오전 06:29            11,264 write.exe
+2020-07-07  오후 02:58           351,808 y5writeCOM.dll
+              32개 파일          12,301,162 바이트
+              77개 디렉터리  184,987,275,264 바이트 남음

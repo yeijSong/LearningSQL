@@ -1,0 +1,37 @@
+select lower ('문자열') from dual; -> 문자를 모두 소문자로
+select upper ('문자열') from dual; -> 문자를 모두 대문자로
+select initcap ('문자열') from dual; -> 각 단어의 첫 글자를 대문자로
+select length ('문자열') from dual; -> 문자의 글자 수
+
+**********************************************************************
+
+SQL> select lower ('Korea') from dual;
+
+LOWER('KOR
+----------
+korea
+
+SQL> select upper ('Korea') from dual;
+
+UPPER('KOR
+----------
+KOREA
+
+SQL> select initcap ('i am a boy');
+select initcap ('i am a boy')
+                            *
+ERROR at line 1:
+ORA-00923: FROM keyword not found where expected
+
+
+SQL> select initcap ('i am a boy') from dual;
+
+INITCAP('IAMABOY')
+--------------------
+I Am A Boy
+
+SQL> select length('Korea') from dual;
+
+LENGTH('KOREA')
+---------------
+              5
