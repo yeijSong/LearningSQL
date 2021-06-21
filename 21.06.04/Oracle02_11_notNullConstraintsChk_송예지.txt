@@ -1,0 +1,22 @@
+SQL> create table deptT(deptno number(3),
+  2  dname varchar2(10) not null,
+  3  loc varchar2(10));
+
+Table created.
+
+SQL> insert into dept(dnameinsert into deptt(dname,loc) values('총무부','서울');
+insert into dept(dnameinsert into deptt(dname,loc) values('총무부','서울')
+                             *
+ERROR at line 1:
+ORA-00917: missing comma
+
+
+SQL> insert into deptt(dname,loc) values('총무부','서울');
+
+1 row created.
+
+SQL> insert into deptt(deptno,loc) values(10,'서울');
+insert into deptt(deptno,loc) values(10,'서울')
+*
+ERROR at line 1:
+ORA-01400: cannot insert NULL into ("SCOTT"."DEPTT"."DNAME")
