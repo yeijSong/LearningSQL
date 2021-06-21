@@ -1,0 +1,98 @@
+#명령어 오류 수정 : ed
+#이전 작업 결과 확인 : /
+#이전 작업 명령어 및 결과 확인 : run
+
+SQL> insert into membert01
+  2  values('오렌지1', 'Orange1', '1234', 'Orange1@test.com','044','홍익대학교');
+
+1 row created.
+
+SQL> insert into membert01
+  2  insert into membert01insert into membert01
+  3
+SQL> insert into membert01
+  2  values('오렌지', 'Orange', '1234', 'Orange@test.com','044','홍익대학교');
+
+1 row created.
+
+SQL> insert into membert01
+  2  values('오렌지3', 'Orange3', '1234', 'Orange3@test.com','044','홍익대학교');
+
+1 row created.
+
+SQL> select * from tab;
+
+TNAME                                                        TABTYPE         CLUSTERID
+------------------------------------------------------------ -------------- ----------
+MEMBERT01                                                    TABLE
+
+SQL> select * from membert01;
+
+MEM_NAME                                 MEM_ID                                   MEM_PWD
+                   MEM_EMAIL
+---------------------------------------- ---------------------------------------- ---------------------------------------- ----------------------------------------
+MEM_PHONE                                MEM_ADDR2
+---------------------------------------- ------------------------------------------------------------
+오렌지1                                  Orange1                                  1234
+                           Orange1@test.com
+044                                      홍익대학교
+
+오렌지                                   Orange                                   1234
+                           Orange@test.com
+044                                      홍익대학교
+
+오렌지3                                  Orange3                                  1234
+                           Orange3@test.com
+044                                      홍익대학교
+
+
+SQL> delete from membert01
+  2  where mem_id='Orange1';
+
+1 row deleted.
+
+SQL> select * from membert01;
+
+MEM_NAME                                 MEM_ID                                   MEM_PWD
+                   MEM_EMAIL
+---------------------------------------- ---------------------------------------- ---------------------------------------- ----------------------------------------
+MEM_PHONE                                MEM_ADDR2
+---------------------------------------- ------------------------------------------------------------
+오렌지                                   Orange                                   1234
+                           Orange@test.com
+044                                      홍익대학교
+
+오렌지3                                  Orange3                                  1234
+                           Orange3@test.com
+044                                      홍익대학교
+
+
+SQL> ed
+Wrote file afiedt.buf
+
+  1* select * from membert01
+SQL> /
+
+MEM_NAME                                 MEM_ID                                   MEM_PWD                              MEM_EMAIL
+---------------------------------------- ---------------------------------------- ---------------------------------------- ----------------------------------------
+MEM_PHONE                                MEM_ADDR2
+---------------------------------------- ------------------------------------------------------------
+오렌지                                   Orange                                   1234                                         Orange@test.com
+044                                      홍익대학교
+
+오렌지3                                  Orange3                                  1234                                         Orange3@test.com
+044                                      홍익대학교
+
+
+SQL> run
+  1* select * from membert01
+
+MEM_NAME                                 MEM_ID                                   MEM_PWD                              MEM_EMAIL
+---------------------------------------- ---------------------------------------- ---------------------------------------- ----------------------------------------
+MEM_PHONE                                MEM_ADDR2
+---------------------------------------- ------------------------------------------------------------
+오렌지                                   Orange                                   1234                                         Orange@test.com
+044                                      홍익대학교
+
+오렌지3                                  Orange3                                  1234                                         Orange3@test.com
+044                                      홍익대학교

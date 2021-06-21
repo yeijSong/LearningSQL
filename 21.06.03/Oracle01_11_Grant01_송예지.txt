@@ -1,0 +1,18 @@
+# 새로 생성한 계정에 권한을 부여하기
+만약 권한을 부여하지 않는다면 로그인도 불가
+
+grant 권한 to 계정
+dba는 모든 권한을 뜻함
+
+SQL> create user angel identified by angel;
+
+User created.
+
+SQL> grant dba to angel;
+
+Grant succeeded.
+
+SQL> conn angel/angel
+Connected.
+SQL> show user
+USER is "ANGEL"

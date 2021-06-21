@@ -1,0 +1,23 @@
+1.oracle 설치 확인(실행) 방법
+  1)sqlpus system(계정)
+     pwd
+  2)sqlplus system(계정)/pwd
+
+2. 빠져나오기 : exit
+
+3. 접속계정 확인: show user
+
+4. 관리자 계정 : sys(최상위 관리자), system
+
+5. 테이블: user table, 관리용(미리 만들어둔)->tab
+
+6. cl scr
+
+7.show pagesize/linesize
+
+8. 접속상태에서 계정 변경
+  1)conn 계정
+     pwd
+  2)conn 계정/ora11
+
+9. sys계정 접속 방법 : conn /as sysdba
